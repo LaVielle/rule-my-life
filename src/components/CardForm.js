@@ -1,12 +1,18 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { createDecision } from '../actions'
 import '../styles/CardForm.css'
 
-export default class CardForm extends React.Component {
+class CardForm extends React.Component {
 
   state = {
     question: '',
     optionA: '',
     optionB: '',
+  }
+
+  componentDidMount() {
+    console.log(this.props);
   }
 
   handleValueChange = (event, field) => {
@@ -19,13 +25,15 @@ export default class CardForm extends React.Component {
         this.state.optionB.length > 0) {
 
       const data = {
-        user: 'insert setCurrentUser.id',
         title: this.state.question,
         optionA: this.state.optionA,
-        optionB: this.state.optionB
+        optionB: this.state.optionB,
+        user: 'insert setCurrentUser.id',
+        id: 'generate id',
+        votes: []
       }
 
-      console.log(data);
+      this.props.dispatch(createDecision(data))
 
       this.setState({ question: '', optionA: '', optionB: '' })
     }
@@ -78,3 +86,5 @@ export default class CardForm extends React.Component {
     )
   }
 }
+
+export default connect()(CardForm)

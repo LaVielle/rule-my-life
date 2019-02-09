@@ -22,3 +22,8 @@ export const getDecisionList = decisionList => ({
   type: 'GET_DECISION_LIST',
   decisionList
 })
+
+export const createDecision = data => ({
+  type: 'CREATE_DECISION',
+  data
+})

@@ -67,4 +67,21 @@ describe('decision actions', () => {
     })
   })
 
+  it('createDecision should create a CREATE_DECISION action', () => {
+
+    const data = {
+      title: 'someTitle',
+      optionA: 'someOptionA',
+      optionB: 'someOptionB',
+      user: 'someUserId',
+      id: 'someID',
+      votes: []
+    }
+
+    expect(actions.createDecision(data)).toEqual({
+      type: 'CREATE_DECISION',
+      data
+    })
+  })
+
 })

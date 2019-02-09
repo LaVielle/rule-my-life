@@ -2,6 +2,9 @@ const decisions = (state = [], action) => {
   switch (action.type) {
     case 'GET_DECISION_LIST':
       return action.decisionList
+    case 'CREATE_DECISION': {
+      return [...state, {...action.data}]
+    }
     case 'VOTE': {
       const decisions = [...state]
       const theDecision = decisions.find(el => el.id === action.data.decision)
