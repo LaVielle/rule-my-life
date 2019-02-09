@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { createDecision } from '../actions'
 import '../styles/CardForm.css'
+import uuidv4 from 'uuid/v4'
 
 class CardForm extends React.Component {
 
@@ -28,8 +29,8 @@ class CardForm extends React.Component {
         title: this.state.question,
         optionA: this.state.optionA,
         optionB: this.state.optionB,
-        user: 'insert setCurrentUser.id',
-        id: 'generate id',
+        user: this.props.currentUser.id,
+        id: uuidv4(),
         votes: []
       }
 

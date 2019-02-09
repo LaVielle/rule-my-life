@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { getDecisionList, setCurrentUser } from '../actions'
 import DecisionList from '../containers/DecisionList'
-import CardForm from '../components/CardForm'
+import CardFormContainer from '../containers/CardFormContainer'
 import data_decisions from '../data_decisions.json'
 import data_currentUser from '../data_currentUser.json'
 
@@ -14,7 +14,7 @@ const App = ({ dispatch }) => {
   return (
     <div className="App">
       <DecisionList />
-      <CardForm />
+      <CardFormContainer />
     </div>
   )
 }
