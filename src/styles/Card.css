@@ -16,8 +16,9 @@
   align-items: center;
   text-align: center;
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
+  font-weight: 700;
+  /* border-radius: 5px;
+  border: 1px solid lightgrey; */
 }
 
 .Card-options-container {
@@ -45,5 +46,18 @@
 }
 
 .Card-option-selected {
-  border: 2px solid #92e692;
+  position: relative;
+}
+
+.Card-option-selected::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border-radius: 5px;
+  -webkit-box-shadow:inset 0px 0px 0px 2px #92e692;
+  -moz-box-shadow:inset 0px 0px 0px 2px #92e692;
+  box-shadow:inset 0px 0px 0px 2px #92e692;
 }
