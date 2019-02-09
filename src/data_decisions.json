@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Should I...",
+    "optionA": "go to school?",
+    "optionB": "go surfing?",
+    "user": "u-ec35r",
+    "id": "d-00001",
+    "votes": []
+  },
+  {
+    "title": "Should I date Matt???",
+    "optionA": "Yes",
+    "optionB": "No",
+    "user": "u-57xb3",
+    "id": "d-00002",
+    "votes": []
+  },
+  {
+    "title": "What's my lunch?",
+    "optionA": "Salad 🥗",
+    "optionB": "Burger 🍔",
+    "user": "u-q2j84",
+    "id": "d-00003",
+    "votes": []
+  }
+]
