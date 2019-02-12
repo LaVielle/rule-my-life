@@ -1,13 +1,12 @@
 .Card-container {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  align-items: stretch;
   padding: 10px;
   margin: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid lightgrey;
+  flex-shrink: 0;
 }
 
 .Card-title {
@@ -17,14 +16,11 @@
   text-align: center;
   padding: 10px;
   font-weight: 700;
-  /* border-radius: 5px;
-  border: 1px solid lightgrey; */
 }
 
 .Card-options-container {
   display: flex;
   flex-direction: row;
-  flex: 1;
   align-items: center;
   justify-content: space-between;
 }

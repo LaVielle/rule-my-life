@@ -5,6 +5,7 @@ import DecisionList from '../containers/DecisionList'
 import CardFormContainer from '../containers/CardFormContainer'
 import data_decisions from '../data_decisions.json'
 import data_currentUser from '../data_currentUser.json'
+import '../styles/App.css'
 
 const App = ({ dispatch }) => {
 
@@ -13,8 +14,10 @@ const App = ({ dispatch }) => {
 
   return (
     <div className="App">
+      <div className="App-inner">
       <DecisionList />
       <CardFormContainer />
+      </div>
     </div>
   )
 }
